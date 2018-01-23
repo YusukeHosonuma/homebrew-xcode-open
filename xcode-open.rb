@@ -1,13 +1,13 @@
 class XcodeOpen < Formula
   desc "Support open Xcode in terminal (with specify version)"
   homepage ""
-  url "https://github.com/YusukeHosonuma/xcode-open/archive/1.0.0.tar.gz"
-  sha256 "1ea859b9375257f6ee4336cf0822820788f14f83b5f7b1d36d4f3556aa44a385"
+  url "https://github.com/YusukeHosonuma/xcode-open/archive/1.1.0.tar.gz"
+  sha256 "f0a52df145ae9c104de9963a002a0fbb2092b7a0f2cbe156d9d350648f08ce21"
 
   def install
     system "make", "release-build"
     bin.install ".build/release/xcode-open"
   end
 
-  depends_on :xcode => ["9.0", :build]
+  depends_on :xcode => ["9.2", :build]
 end
